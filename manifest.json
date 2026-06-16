@@ -1,11 +1,11 @@
 {
   "manifest_version": 3,
-  "name": "Sub Link Scraper (Browser Mode)",
+  "name": "Subscription Endpoint Health Checker",
   "version": "3.0",
-  "description": "Генератор и парсер ссылок с использованием реального рендеринга страницы для обхода блокировок.",
+  "description": "A local browser tool for authorized health checks of known subscription endpoints on domains you own or manage.",
   "action": {
     "default_popup": "popup.html",
-    "default_title": "Открыть сканер"
+    "default_title": "Endpoint Health Checker"
   },
   "permissions": [
     "storage",
