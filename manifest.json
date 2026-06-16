@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "Sub Link Scraper (Browser Mode)",
+  "version": "3.0",
+  "description": "Генератор и парсер ссылок с использованием реального рендеринга страницы для обхода блокировок.",
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Открыть сканер"
+  },
+  "permissions": [
+    "storage",
+    "downloads",
+    "tabs",
+    "scripting"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  }
+}

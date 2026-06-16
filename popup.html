@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <h3>🔑 Sub Scraper v3</h3>
+  
+  <!-- Режим генератора -->
+  <div class="section">
+    <label>Режим: Генератор</label>
+    <div class="input-group">
+      <input type="text" id="domain" placeholder="domain.name">
+      <button id="startGenBtn" class="btn-start">▶ Старт</button>
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- Режим импорта -->
+  <div class="section">
+    <label>Режим: Импорт из файла (.txt)</label>
+    <input type="file" id="fileInput" accept=".txt,.csv" class="file-input">
+    <button id="startImportBtn" class="btn-start" disabled>▶ Проверить файл</button>
+  </div>
+
+  <hr>
+
+  <!-- Управление -->
+  <div class="controls">
+    <button id="stopBtn" class="btn-stop" disabled>⏹ Стоп</button>
+    <button id="clearBtn" class="btn-clear">🗑 Сброс</button>
+  </div>
+
+  <!-- Статистика -->
+  <div class="stats">
+    <div class="stat-item">
+      <span class="stat-label">Проверено:</span>
+      <span id="attemptsCount" class="stat-value">0</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-label">OK:</span>
+      <span id="okCount" class="stat-value ok-text">0</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-label">ERR (502):</span>
+      <span id="errCount" class="stat-value err-text">0</span>
+    </div>
+  </div>
+
+  <div id="statusText" class="status-bar">🔴 Остановлен</div>
+
+  <!-- Кнопки скачивания -->
+  <div class="download-controls">
+    <button id="downloadOkBtn" class="btn-download ok-btn">💾 Скачать OK</button>
+    <button id="downloadErrBtn" class="btn-download err-btn">💾 Скачать ERR</button>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
